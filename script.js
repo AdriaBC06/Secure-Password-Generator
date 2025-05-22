@@ -10,8 +10,6 @@ let applySpecial;
 
 let passwordPosibilities = "";
 
-let passwordLength = 5;
-
 let password = "";
 
 console.log(localStorage.getItem("applyMayus"));
@@ -20,6 +18,7 @@ document.getElementById("mayus").checked = localStorage.getItem("applyMayus") ==
 document.getElementById("minus").checked = localStorage.getItem("applyMinus") === "true";
 document.getElementById("numbers").checked = localStorage.getItem("applyNumbers") === "true";
 document.getElementById("special").checked = localStorage.getItem("applySpecial") === "true";
+document.getElementById("length").value = localStorage.getItem("length");
 
 function generatePassword() {
     password = "";
@@ -54,8 +53,8 @@ function generatePassword() {
         applySpecial = false;
     }
 
-    if (passwordPosibilities.length > 0 && passwordLength > 0) {
-        for (let i = 0; i < passwordLength; i++) {
+    if (passwordPosibilities.length > 0 && document.getElementById("length").value > 0) {
+        for (let i = 0; i < document.getElementById("length").value; i++) {
             password += passwordPosibilities.charAt(Math.floor(Math.random() * passwordPosibilities.length));
         }
     }
@@ -82,3 +81,6 @@ document.getElementById("numbers").addEventListener("change", () =>
 document.getElementById("special").addEventListener("change", () => 
     {localStorage.setItem("applySpecial", 
         document.getElementById("special").checked)});
+
+document.getElementById("length").addEventListener("change", () =>
+{localStorage.setItem("length", document.getElementById("length").value)});
