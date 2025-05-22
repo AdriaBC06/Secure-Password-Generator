@@ -57,13 +57,48 @@ main {
     padding: 50px;
     width: 50%;
     border: var(--primary-color) solid 5px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+#password{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-right: 25px;
+    max-width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-background-color);
+    border-radius: 5px;
+}
+
+#password::-webkit-scrollbar {
+    height: 8px;
+}
+
+#password::-webkit-scrollbar-track {
+    background: var(--secondary-background-color);
+    border-radius: 4px;
+}
+
+#password::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+#password::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+#password {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--secondary-background-color);
 }
 
 .button {
