@@ -62,6 +62,14 @@ function generatePassword() {
     document.getElementById("password").innerHTML = password;
 }
 
+function copy(){
+    var copyText = document.getElementById("password").innerHTML;
+
+    navigator.clipboard.writeText(copyText);
+
+    alert("Copied password correctly! :)");
+}
+
 generatePassword();
 
 document.getElementById("generatePasswordButton").addEventListener("click", generatePassword);
@@ -84,3 +92,5 @@ document.getElementById("special").addEventListener("change", () =>
 
 document.getElementById("length").addEventListener("change", () =>
 {localStorage.setItem("length", document.getElementById("length").value)});
+
+document.getElementById("copy").addEventListener("click", copy);
