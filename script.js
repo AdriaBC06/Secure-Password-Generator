@@ -3,7 +3,7 @@ const MINUS_LETTERS = "abcdefghijklmnopqrstuvwxyz";
 const NUMBERS = "1234567890";
 const SPECIAL_CHARACTERS = ".!?;:'@#$%^&*_-+=~`|/(){}[]<>";
 
-let applyMayus = false;
+let applyMayus = true;
 let applyMinus = false;
 let applyNumbers = false;
 let applySpecial = false;
@@ -15,6 +15,9 @@ let passwordLength = 5;
 let password = "";
 
 function generatePassword() {
+    password = "";
+
+    passwordPosibilities = "";
 
     if (applyMayus) {
         passwordPosibilities += MAYUS_LETTERS;
@@ -46,3 +49,5 @@ function generatePassword() {
 }
 
 generatePassword();
+
+document.getElementById("generatePasswordButton").addEventListener("click", generatePassword);
