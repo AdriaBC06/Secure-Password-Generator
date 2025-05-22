@@ -3,7 +3,7 @@ const MINUS_LETTERS = "abcdefghijklmnopqrstuvwxyz";
 const NUMBERS = "1234567890";
 const SPECIAL_CHARACTERS = ".!?;:'@#$%^&*_-+=~`|/(){}[]<>";
 
-let applyMayus = true;
+let applyMayus = false;
 let applyMinus = false;
 let applyNumbers = false;
 let applySpecial = false;

@@ -18,10 +18,24 @@
     </header>
 
     <main>
+        <div id="optionsBox">
+            <div class="option"><label for="mayus">Capital</label>
+                <input type="checkbox" id="mayus" name="mayus" value="mayus">
+            </div>
+            <div class="option"><label for="minus">Lowercase</label>
+                <input type="checkbox" id="minus" name="minus" value="minus">
+            </div>
+            <div class="option"><label for="numbers">Numbers</label>
+                <input type="checkbox" id="numbers" name="numbers" value="numbers">
+            </div>
+            <div class="option"> <label for="special">Special</label>
+                <input type="checkbox" id="special" name="special" value="special">
+            </div>
+        </div>
         <div id="passwordBox">
             <div id="password"></div>
-            <button class = "button" id = "copy">
-                <img class = "copy-svg" src="./resources/copy.svg">
+            <button class="button" id="copy">
+                <img class="copy-svg" src="./resources/copy.svg">
             </button>
         </div>
         <button class="button" id="generatePasswordButton">Generate new Password</button>
