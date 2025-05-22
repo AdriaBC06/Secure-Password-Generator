@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Generate strong and customizable passwords instantly.">
-  <meta name="author" content="Adrià Bonnin" />
-  <title>Password Generator</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generate strong and customizable passwords instantly.">
+    <meta name="author" content="Adrià Bonnin" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>Password Generator</h1>
-    <p>Create secure and personalized passwords in seconds.</p>
-  </header>
+    <header>
+        <h1>Password Generator</h1>
+        <p>Create secure and personalized passwords in seconds.</p>
+    </header>
 
-  <main>
-    <div id = "passwordBox">
-        <p id = "password">1234</p>
-    </div>
-  </main>
+    <main>
+        <div id="passwordBox">
+            <p id="password">1234</p>
+            <button class = "button" id = "copy">
+                <img class = "copy-svg" src="./resources/copy.svg">
+            </button>
+        </div>
+        <button class="button" id="generatePasswordButton">Generate new Password</button>
+    </main>
 
-  <footer>
-    <p>Created by Adrià Bonnin · <time datetime="2025-05-22">22 - 05 - 2025</time></p>
-  </footer>
+    <footer>
+        <p>Created by Adrià Bonnin · <time datetime="2025-05-22">22 - 05 - 2025</time></p>
+    </footer>
 </body>
+
 </html>

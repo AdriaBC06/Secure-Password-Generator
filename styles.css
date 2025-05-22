@@ -1,8 +1,8 @@
 :root {
     --primary-color: #1DCD9F;
     --secondary-color: #169976;
-    --background-color: #222222;
-    --secondary-background-color: #000000;
+    --background-color: #181818;
+    --secondary-background-color: #111111;
     --primary-background-contrast: #ffffff;
     --secondary-background-contrast: #E0E0E0;
 }
@@ -13,7 +13,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-html{
+html {
     height: 100%;
 }
 
@@ -33,23 +33,71 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 40px;
-    border-bottom: #1DCD9F solid 5px;
+    border-bottom: var(--primary-color) solid 5px;
 }
 
-header h1{
+header h1 {
     font-size: 30px;
 }
 
-header p{
+header p {
     font-size: 15px;
 }
 
-main{
+main {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondary-background-color);
 }
 
-footer{
-    border-top: #1DCD9F solid 5px;
+#passwordBox {
+    padding: 50px;
+    width: 50%;
+    border: var(--primary-color) solid 5px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    font-weight: bold;
+    background-color: transparent;
+    border: var(--primary-color) solid 5px;
+    border-radius: 10px;
+    color: var(--primary-background-contrast);
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--background-color);
+}
+
+#generatePasswordButton {
+    margin-top: 100px;
+    padding: 30px;
+    font-size: 30px;
+}
+
+#copy {
+    padding: 10px;
+    border: 0;
+
+}
+
+.copy-svg {
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    border-top: var(--primary-color) solid 5px;
     height: 50px;
     display: flex;
     justify-content: flex-end;
